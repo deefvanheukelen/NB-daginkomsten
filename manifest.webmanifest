@@ -1,7 +1,7 @@
 {
   "name": "NB-daginkomsten",
   "short_name": "NB-daginkomsten",
-  "start_url": "/NB-daginkomsten/",
+  "start_url": "./?source=pwa",
   "display": "standalone",
   "background_color": "#fff7f9",
   "theme_color": "#c83763",
@@ -26,6 +26,7 @@
       "purpose": "maskable"
     }
   ],
-  "id": "/NB-daginkomsten/",
-  "scope": "/NB-daginkomsten/"
+  "id": "https://deefvanheukelen.github.io/NB-daginkomsten/",
+  "scope": "./",
+  "description": "Dag- en maandoverzicht van NailBooker-inkomsten"
 }
