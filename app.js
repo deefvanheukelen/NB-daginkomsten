@@ -66,7 +66,7 @@ async function fetchPeriod(date,view){
   const services=new Map((servicesResult.data||[]).map(s=>[String(s.id),s]));
   const customers=new Map((customersResult.data||[]).map(c=>[String(c.id),c]));
   return (appointmentsResult.data||[]).map(r=>normalize(r,services,customers)).filter(r=>
-    !r.private && !r.deleted && lower(r.payment)!=='andere' &&
+    !r.private && !r.deleted && Number.isFinite(r.amount) && r.amount !== 0 && lower(r.payment)!=='andere' &&
     !(r.service.trim().toLocaleUpperCase('nl-BE').endsWith('Z') && !r.paid) &&
     !SCHEMA.excludedServices.some(s=>lower(s)===lower(r.service)) &&
     !SCHEMA.privateServiceNames.some(s=>lower(s)===lower(r.service))
