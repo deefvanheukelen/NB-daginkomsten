@@ -1,20 +1,9 @@
-// Kopieer hier de PUBLIEKE Supabase-configuratie uit de bestaande NailBooker-app.
-export const SUPABASE_URL = '';
-export const SUPABASE_ANON_KEY = '';
-// Pas deze mapping aan de bestaande NailBooker-tabellen aan (zie README).
+// Publieke configuratie uit NailBooker/supabase-client.js (geen geheime sleutel).
+export const SUPABASE_URL = 'https://lqrdawkmiqdojenouill.supabase.co';
+export const SUPABASE_ANON_KEY = 'sb_publishable_CooJe-_05o0_DnryGaj9ng_OAX_46EL';
 export const SCHEMA = {
-  table: 'appointments',
-  date: 'date',
-  time: 'time',
-  service: 'service_name',
-  customer: 'customer_name',
-  amount: 'price',
-  payment: 'payment_method',
-  private: 'is_private',
-  deleted: 'deleted_at',
-  user: 'user_id',
-  // Waarden die NIET in het overzicht horen:
-  excludedServices: ['Andere'],
-  // Eventueel aanvullende waarden voor privéafspraken:
-  privateServiceNames: ['Privé', 'Prive']
+  table: 'appointments', date: 'appointment_date', time: 'appointment_time',
+  service: 'service_id', customer: 'customer_id', amount: 'price',
+  payment: 'payment_method_label', private: 'is_private', deleted: 'deleted_at',
+  user: 'user_id', excludedServices: ['Andere'], privateServiceNames: ['Privé', 'Prive']
 };
